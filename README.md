@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 # Dockerized-Notes-App
-=======
-# half vibe-coded project using gemini cli
+# half vibe-coded project using gemini 
 # Gooners-Notes
 
 A simple, containerized note-taking application built with **Flask** and **Redis**. This project demonstrates how to orchestrate a Python web application with a NoSQL database using Docker Compose.
