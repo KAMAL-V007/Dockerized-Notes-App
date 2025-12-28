@@ -1,0 +1,17 @@
+✦ I've created the "NeonNotes" project in the neon_notes folder.
+
+  Project Structure:
+   * app.py: The Flask application logic (Backend).
+   * templates/index.html: The beautiful dark-mode UI (Frontend).
+   * requirements.txt: Python dependencies.
+
+  Your Goal:
+   1. Create a `Dockerfile` in neon_notes/ for the Flask app.
+       * Hint: Base image python:3.9-slim.
+       * Hint: Copy requirements.txt, install them, then copy the rest.
+   2. Create a `docker-compose.yaml` to run:
+       * The `web` service (your Flask app).
+       * The `redis_db` service (Image: redis:alpine).
+       * Important: In app.py, I set the host to redis_db. Make sure your service name in docker-compose.yaml matches this exactly!
+
+  Go ahead and create the files! This one is going to look great.
