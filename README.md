@@ -29,7 +29,7 @@ A simple, containerized note-taking application built with **Flask** and **Redis
 1.  **Clone the repository:**
     ```bash
     git clone <your-repo-url>
-    cd neon_notes
+    cd Dockerized-Notes-App
     ```
 
 2.  **Start the application:**
