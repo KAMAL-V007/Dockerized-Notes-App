@@ -6,9 +6,13 @@ import json
 
 app = Flask(__name__)
 
-# Connect to Redis (Container name will be 'redis_db')
+# Externalized configuration for 12-factor app compliance
+REDIS_HOST = os.getenv("REDIS_HOST", "redis_db")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
+
+# Connect to Redis
 # We use 'decode_responses=True' so we get Strings back, not Bytes
-r = redis.Redis(host="redis_db", port=6379, db=0, decode_responses=True)
+r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, db=0, decode_responses=True)
 
 
 @app.route("/")

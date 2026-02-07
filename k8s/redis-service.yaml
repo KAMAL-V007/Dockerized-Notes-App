@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: redis-svc
+  namespace: notes-app
+spec:
+  selector:
+    app: notes-db
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379
+  type: ClusterIP

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neon-notes
+  namespace: notes-app
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: neon-notes
+  template:
+    metadata:
+      labels:
+        name: neon-notes
+    spec:
+      containers:
+        - name: notes-cont
+          image: kamalv007/notes-app:v1
+          ports:
+            - containerPort: 5000
+          env:
+            - name: REDIS_HOST
+              value: "redis-service"
+            - name: REDIS_PORT
+              value: "6379"
