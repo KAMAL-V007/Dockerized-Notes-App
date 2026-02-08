@@ -1,0 +1,27 @@
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ##lint check
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CheckOut Code
+        uses: actions/checkout@v3
+
+      - name: Installing Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
+        uses: |
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: Lint with Flake8
+        run: |
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
