@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: notes-cont
-          image: kamalv007/notes-app:v1
+          image: kamalv007/neon-notes:v1
           ports:
             - containerPort: 5000
           env:

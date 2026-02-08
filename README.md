@@ -1,6 +1,6 @@
 
 # Dockerized-Notes-App
-# Gooners-Notes
+# Neon-Notes
 
 A simple, containerized note-taking application built with **Flask** and **Redis**.
 
