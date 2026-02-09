@@ -3,8 +3,10 @@ from flask import Flask, render_template, request, redirect
 import redis
 import os
 import json
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 # Externalized configuration for 12-factor app compliance
 REDIS_HOST = os.getenv("REDIS_HOST", "redis_db")
