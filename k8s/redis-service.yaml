@@ -5,7 +5,7 @@ metadata:
   namespace: notes-app
 spec:
   selector:
-    app: notes-db
+    app: redis-db
   ports:
     - protocol: TCP
       port: 6379

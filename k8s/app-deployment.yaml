@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
         - name: notes-cont
-          image: kamalv007/neon-notes:v1
+          image: kamalv007/neon-notes:latest
           ports:
             - containerPort: 5000
           env:
             - name: REDIS_HOST
-              value: "redis-service"
+              value: "redis-svc"
             - name: REDIS_PORT
               value: "6379"

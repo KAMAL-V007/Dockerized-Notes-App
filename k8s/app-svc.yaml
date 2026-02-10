@@ -6,7 +6,7 @@ metadata:
 
 spec:
   selector:
-    app: notes-app
+    name: neon-notes
   ports:
     - protocol: TCP
       port: 80
